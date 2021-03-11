@@ -1,0 +1,12 @@
+- const PATH = pathPrefix;
+- const lang = 'ru';
+
+mixin placeholderPath(path=PATH)
+    -
+        staticPath = {
+            css: `${path}assets/css`,
+            js: `${path}assets/js`,
+            img: `${path}assets/img/content`,
+        }
+
++placeholderPath()

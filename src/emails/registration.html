@@ -1,0 +1,57 @@
+{% extends "_layout.html" %}{% block content %}
+
+<!-- START banner -->
+<div class="banner">
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <a href="#" title="#">
+                    <img src="images/banner.jpg" alt="#">
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- END banner -->
+
+<table class="main">
+    <!-- START MAIN CONTENT AREA -->
+    <tr>
+        <td class="wrapper align-center">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <h1>Подтвердите регистрацию</h1>
+                        <p>Ваш адрес
+                            <strong>admin@example.com </strong>был использован для регистрации на сайте. Чтобы
+                            подтвердить регистрацию,
+                            нажмите на кнопку ниже.</p>
+                        <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary mb-5">
+                            <tbody>
+                                <tr>
+                                    <td align="center" style="padding-bottom: 0;">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a href="{confirm-url}" target="_blank">Подтвердить
+                                                            регистрацию</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, quam!</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- END MAIN CONTENT AREA -->
+</table>
+
+{% endblock %}

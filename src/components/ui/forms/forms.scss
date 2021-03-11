@@ -1,0 +1,28 @@
+.input {
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+
+    &::placeholder {
+        color: var(--gray-color);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: var(--primary-color);
+    }
+
+    .error & {
+        border-color: var(--red-color);
+    }
+}
+
+textarea {
+    resize: none;
+
+    &.input {
+        height: auto;
+    }
+}

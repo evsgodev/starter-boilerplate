@@ -1,0 +1,13 @@
+.DS_Store
+.sass-cache
+.publish
+Desktop.ini
+node_modules
+npm-debug.log
+yarn-error.log
+dev
+*.zip
+**/components/**/*.svg
+**/components/**/__snapshot-*
+.vscode
+.idea

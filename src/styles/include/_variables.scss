@@ -1,0 +1,39 @@
+$generate-sprites: false; // true or false
+
+// Media Queries
+$mq-xs-min: 374px;
+$mq-sm-min: 575px;
+$mq-sm-tablet-min: 767px;
+$mq-md-min: 992px;
+$mq-lg-tablet-min: 1023px;
+$mq-xl-tablet-min: 1365px;
+
+$mq-sm-max: 576px;
+$mq-sm-tablet-max: 768px;
+$mq-md-max: 993px;
+$mq-lg-tablet-max: 1024px;
+$mq-xl-tablet-max: 1366px;
+
+:root {
+    // Colors
+    --black-color: #202833;
+    --gray-color: #A6B2BF;
+    --white-color: #ffffff;
+    --blue-color: #278AFE;
+    --red-color: #FF5E5E;
+
+    // Colors theme
+    --primary-color: var(--blue-color);
+
+    // Timing functions
+    --t-base: 0.2s ease-in-out;
+    --t-smooth: cubic-bezier(.215, .61, .355, 1);
+    --t-elastic: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    // Fonts
+    --font-size-base: 16px;
+    --font-family-default: 'Open Sans', sans-serif;
+    --font-family-secondary: 'Open Sans', sans-serif;
+
+    --header-height: 57px;
+}

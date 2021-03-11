@@ -1,0 +1,21 @@
+{% include "../../components/config.njk" %}
+{% from "../../components/layout/head/head.njk" import Head %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+    {{ Head(head.default) }}
+    <body>
+        %symbols%
+        <div class="page-wrapper">
+            {% block header %}{% endblock %}
+
+            <main class="page-content">
+                {% block content %}{% endblock %}
+            </main>
+
+            {% block footer %}{% endblock %}
+        </div>
+        <script src="__static__assets/js/vendor.js"></script>
+        <script src="__static__assets/js/main.js"></script>
+    </body>
+</html>
