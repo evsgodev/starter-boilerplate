@@ -1,8 +1,14 @@
-{% include "../../components/config.njk" %}
+{% import "../../components/config.njk" as config %}
 {% from "../../components/layout/head/head.njk" import Head %}
 
+{% macro Icon(name, width=undefined, height=width) %}
+    <svg class="icon-{{ name }}" width="{{ width }}" height="{{ height }}">
+        <use xlink:href="{% if symbolsInject %} #{{ name }} {% else %} {{ prefixPath }}assets/img/svg-symbols.svg#{{ name }} {% endif %}"></use>
+    </svg>
+{% endmacro %}
+
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="{{ config.lang }}">
     {{ Head(head.default) }}
     <body>
         %symbols%
