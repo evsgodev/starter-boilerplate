@@ -1,13 +1,15 @@
 mixin Head(data)
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='description', content=data.description)
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(name='MobileOptimized', content='320')
     meta(name='HandheldFriendly' content='True')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title=page.title ? page.title : data.title
+    meta(name='description', content=data.description)
     meta(name='msapplication-tap-highlight', content='no')
     meta(name='mobile-web-app-capable', content='yes')
     meta(name='application-name', content=data.description)
+    meta(name='apple-mobile-web-app-title', content=page.title ? page.title : data.title)
     meta(name='apple-mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-status-bar-style', content='black')
     block styles
