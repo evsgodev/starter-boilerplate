@@ -50,7 +50,11 @@ const template = {
         `!${sourceFolder}/components/**/${templateDataFileName}`
     ],
     distComponents: `${sourceFolder}/components/`,
-    render: [`${sourceFolder}/pages`, `${sourceFolder}/components`],
+    render: [
+        `${sourceFolder}/pages`,
+        `${sourceFolder}/pages/templates`,
+        `${sourceFolder}/components`
+    ],
     dist: `${developer}/`
 };
 

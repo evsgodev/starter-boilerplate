@@ -1,5 +1,4 @@
 {% import "../../components/config.njk" as config %}
-{% from "../../components/layout/head/head.njk" import Head %}
 
 {% macro Icon(name, width=undefined, height=width) %}
     <svg class="icon-{{ name }}" width="{{ width }}" height="{{ height }}">
@@ -9,19 +8,45 @@
 
 <!DOCTYPE html>
 <html lang="{{ config.lang }}">
-    {{ Head(head.default) }}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="MobileOptimized" content="320">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>{{ head.title }}</title>
+        <meta name="description" content="{{ head.description }}">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="msapplication-TileImage" content="__static__assets/img/content/favicons/ms-touch-icon-144x144-precomposed.png">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="{{ head.description }}">
+        <link rel="icon" sizes="192x192" href="__static__assets/img/content/favicons/chrome-touch-icon-192x192.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="{{ head.title }}">
+        <link rel="apple-touch-icon" href="__static__assets/img/content/favicons/apple-touch-icon.png">
+        {% block styles %}
+            {% for item in concat.css %}
+                <link href="__static__assets/css/{{ item.name }}" rel="stylesheet">
+            {% endfor %}
+            <link href="__static__assets/css/vendor.css" rel="stylesheet">
+            <link href="__static__assets/css/main.css" rel="stylesheet">
+        {% endblock %}
+    </head>
     <body>
         %symbols%
         <div class="page-wrapper">
             {% block header %}{% endblock %}
-
             <main class="page-content">
                 {% block content %}{% endblock %}
             </main>
-
             {% block footer %}{% endblock %}
         </div>
-        <script src="__static__assets/js/vendor.js"></script>
-        <script src="__static__assets/js/main.js"></script>
+        {% block scripts %}
+            {% for item in concat.js %}
+                <script src="__static__assets/js/{{ item.name }}" {% for props, val in item.props %} {{ props }}="{{ val }}" {% endfor %}></script>
+            {% endfor %}
+            <script src="__static__assets/js/vendor.js"></script>
+            <script src="__static__assets/js/main.js"></script>
+        {% endblock %}
     </body>
 </html>
