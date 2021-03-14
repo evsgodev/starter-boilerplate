@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="{{ Config.lang }}">
     <head>
-        {{ Head.content(head, pathPrefix) }}
+        {{ Head.content(head.default, pathPrefix) }}
         {% block styles %}
             {% for item in concat.css %}
                 <link href="{{ pathPrefix }}assets/css/{{ item.name }}" rel="stylesheet">
