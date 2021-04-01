@@ -7,3 +7,12 @@
 .page-content {
     flex-grow: 1;
 }
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding-right: var(--container-gutter);
+    padding-left: var(--container-gutter);
+    margin-right: auto;
+    margin-left: auto;
+}
