@@ -1,9 +1,9 @@
-const triggerEvent = (typeEvent, elem) => {
+const triggerEvent = (typeEvent, elem, bubbles = true) => {
     let event;
 
     if (typeEvent === 'click') {
         event = new MouseEvent('click', {
-            bubbles: true,
+            bubbles,
             cancelable: true,
             view: window
         });
