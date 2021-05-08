@@ -11,3 +11,5 @@ const triggerEvent = (typeEvent, elem, bubbles = true) => {
 
     const canceled = !elem.dispatchEvent(event);
 };
+
+export default triggerEvent;
