@@ -38,6 +38,9 @@ export default class Styles {
             }))
             .pipe($.concat(`${styleFileName}.css`))
             .pipe($.if(minifyCss, $.cssnano({
+                autoprefixer: {
+                    remove: false
+                },
                 discardUnused: false,
                 reduceIdents: false,
                 zindex: false
