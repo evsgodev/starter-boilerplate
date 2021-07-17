@@ -9,7 +9,7 @@ In the `assets/img/icons/` folder it is intended for icons in svg format. Here i
 To insert an icon into a page, use the `+icon('icon-name')` mixin.
 To control the color of svg icons in css, you need to remove the `fill` and` stroke` attributes from the `path` tag.
 
-#### Правила для Pug.
+#### Rules for Pug.
 1) The component is created by a mixin with the `data` parameter
 ```commandline
 mixin Header(data = {})
