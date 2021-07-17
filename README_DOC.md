@@ -1,5 +1,5 @@
 <p align="right">
-<a href="README.md">Russian version</a> <a href="README.md">Back to Readme</a>
+<a href="README_DOC_RU.md">Russian version</a> / <a href="README.md">Back to Readme</a>
 </p>
 
 #### General rules.
