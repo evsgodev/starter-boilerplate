@@ -1,5 +1,5 @@
 <p align="right">
-<a href="README_DOC.md">General rules and Documentation / EN</a> <a href="README_DOC_RU.md">RU</a>
+<a href="rules/en.md">General rules and Documentation</a> / <a href="rules/ru.md">Общие правила и документация</a>
 </p>
 
 # Starter Boilerplate

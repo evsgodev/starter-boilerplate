@@ -1,5 +1,5 @@
 <p align="right">
-<a href="README_DOC_RU.md">Russian version</a> / <a href="README.md">Back to Readme</a>
+<a href="ru.md">Russian version</a> / <a href="../README.md">Back to Readme</a>
 </p>
 
 #### General rules.
@@ -63,7 +63,7 @@ block {
     }
 }
 ```
-3) Mainly css variables are used, which are stored in the file variables. Colors are named like this
+3) Mainly css variables are used, which are stored in the file `variables.scss`. Colors are named like this
 ```commandline
 --gray-color: #626263;
 --gray-color-2: #727273;
