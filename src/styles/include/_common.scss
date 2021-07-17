@@ -16,21 +16,21 @@
 
 html,
 body {
-    height: 100%;
     -webkit-overflow-scrolling: touch;
 }
 
 html {
+    height: 100%;
     font-size: var(--font-size-base);
 }
 
 body {
+    display: grid;
+    min-height: 100%;
     margin: 0;
-    font-family: var(--font-family-default);
+    font: 400 1rem/1.5 var(--font-family-default);
     font-feature-settings: normal;
     font-variant: normal;
-    font-size: var(--font-size-base);
-    line-height: 1.5;
     color: var(--black-color);
     background: var(--white-color);
     opacity: 0;
@@ -44,25 +44,18 @@ body {
 a,
 button {
     cursor: pointer;
-}
-
-button {
-    -webkit-appearance: none;
-    border: none;
-    background-color: transparent;
-    box-shadow: none;
 
     &:focus {
         outline: none;
     }
 }
 
-a {
-    color: inherit;
-
-    &:hover {
-        color: var(--primary-color);
-    }
+button {
+    -webkit-appearance: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 img,
