@@ -21,7 +21,10 @@ export default class Styles {
         return src(styleFilesSources, { base: process.cwd() })
             .pipe($.plumber(notifyErr()))
             .pipe($.newer(styles.dist))
-            .pipe($.if(!minifyCss, $.sourcemaps.init()))
+            .pipe($.if(
+                argvMode.sourcemaps, $.sourcemaps.init(),
+                $.if(!minifyCss, $.sourcemaps.init())
+            ))
             .pipe($.importify(`${styleFileName}.scss`))
             .pipe($.sass({
                 outputStyle: 'expanded'
@@ -45,7 +48,10 @@ export default class Styles {
                 reduceIdents: false,
                 zindex: false
             })))
-            .pipe($.if(!minifyCss, $.sourcemaps.write('./')))
+            .pipe($.if(
+                argvMode.sourcemaps, $.sourcemaps.write('./'),
+                $.if(!minifyCss, $.sourcemaps.write('./'))
+            ))
             .pipe(dest(styles.dist));
     }
 }

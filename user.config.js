@@ -8,6 +8,7 @@ const env = {
     'OPTIMIZE_IMAGES': true,
     'PNG_OPTIMIZE': false,
     'PNG_SPRITE': false,
+    sourcemaps: true,
     sourceFolder: 'src',
     developer: 'dev',
     assets: 'dev/assets',
@@ -15,7 +16,7 @@ const env = {
     styleFileName: 'main',
     templatePreproc: 'pug', // Values 'pug' or 'nunjucks'
     templateLocals: {
-        symbolsInject: true,
+        symbolsInject: false,
         pathPrefix: '__static__'
     },
     styles: {

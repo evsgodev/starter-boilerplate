@@ -6,6 +6,7 @@ node_modules
 npm-debug.log
 yarn-error.log
 dev
+build
 *.zip
 **/components/**/*.svg
 **/components/**/__snapshot-*

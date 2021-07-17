@@ -2,10 +2,11 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { argvMode, webpackPath } from './gulp/config';
 const { production } = argvMode.env;
+const devTool = production ? false : 'source-map';
 
 const webpackConfig = {
     mode: production ? 'production' : 'development',
-    devtool: production ? false : 'source-map',
+    devtool: argvMode.sourcemaps ? 'source-map' : devTool,
     entry: webpackPath.entry,
     module: {
         rules: [
